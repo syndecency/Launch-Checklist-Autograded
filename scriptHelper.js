@@ -60,7 +60,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     alert("Pilot and Co-pilot Names must be text.");
   } else if (
     validateInput(fuelLevel) === "Not a Number" ||
-    validateInput(fuelLevel) === "Not a Number"
+    validateInput(cargoLevel) === "Not a Number"
   ) {
     alert("Fuel Level and Cargo Mass inputs must be numbers.");
   }
@@ -91,9 +91,6 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     launchStatus.innerHTML = "Shuttle Not Ready for Launch";
     launchStatus.style.color = "red";
     fuelStatus.innerHTML = "Fuel level high enough for launch";
-  } else {
-    launchStatus.innerHTML = "Unknown Error. Please try again.";
-    launchStatus.style.color = "orange";
   }
 }
 
